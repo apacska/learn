@@ -1,0 +1,143 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background: #F2F3F3;
+}
+div#forms{
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 600px;
+    height: 100px;
+    background: #0CA781;
+    transform: translate(-50%, -50%);
+}
+div#check{
+    display: block;
+    text-align: center;
+    line-height: 100px;
+}
+div#add_new_container{
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #172774;
+}
+div#add_new{
+    position: absolute;
+    width: 700px;
+    height: 100px;
+    background: #0CA781;
+    text-align: center;
+    line-height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#add_new .entypo-cancel{
+    position: absolute;
+    top: -35px;
+    right: 3px;
+    font-size: 42px;
+    color: #F2F3F3;
+    cursor: pointer;
+}
+input[type=text]{
+    width: 220px;
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+input[type=submit]{
+    height: 35px;
+    width: 110px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0CA781;
+    background: #F2F3F3;
+    text-transform: uppercase;
+    transition: 500ms ease all;
+}
+input[type=submit]:hover{
+    color: #F2F3F3;
+    background: #172774;
+    transition: 500ms ease all;
+}
+div#stuff_container{
+    display: block;
+    height: auto;
+    background: #0CA781;
+}
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+div#stuff_container b {
+    display: block;
+    text-align: center;
+    color: #F2F3F3;
+    font-size: 30px;
+    cursor: pointer;
+}
+div#stuffs{
+    display: none;
+    height: 200px;
+}
+div#button{
+    width: 150px;
+    height: 35px;
+    color: #0CA781;
+    background: #172774;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 500ms ease all;
+}
+div#button:hover{
+    background: #F2F3F3;
+    color: #0CA781;
+    transition: 500ms ease all;
+}
+#correct{
+    position: relative;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: #F2F3F3;
+}
+.entypo-check{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #0CA781;
+    font-size: 150px;
+    transform: translate(-50%,-50%);
+}
+#incorrect{
+    position: relative;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: #F2F3F3;
+}
+#incorrect .entypo-cancel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #ED222C;
+    font-size: 150px;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+}
