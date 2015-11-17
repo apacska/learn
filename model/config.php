@@ -1,0 +1,10 @@
+<?php
+if(!isset($CONFIG))$_CONFIG=[];
+$_CONFIG['db']=[
+        'host'=>'localhost',
+        'user'=>'root',
+    'password'=>'',
+          'db'=>'learn',
+     'charset'=>'utf8'
+    ];
+?>
