@@ -1,0 +1,7 @@
+Program
+The aim of the software is to help users learn and practice words in foreign languages. 
+User management
+The user can create themselves an account. From this account page the user can edit their details and add words. 
+Session
+The software uses words and their translation given by the user in self-generated learning/practicing sessions. A session consists of a set amount of words given in one language to which the user shall provide the match in their own language to. By tracking the times a given word was answered correctly/incorrectly by the user, the software will 
+Balázs’s functions:
