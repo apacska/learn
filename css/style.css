@@ -49,7 +49,7 @@ div#add_new{
     color: #F2F3F3;
     cursor: pointer;
 }
-input[type=text]{
+div#check input[type=text]{
     width: 220px;
     height: 35px;
     text-align: center;
@@ -140,4 +140,105 @@ div#button:hover{
     font-size: 150px;
     transform: translate(-50%,-50%);
     z-index: 100;
+}
+
+/******************/
+
+div#login{
+    display: block;
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    background: #172774;
+    transform: translate(-50%,-50%);
+
+}
+div#login label{
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    color: #F2F3F3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+div#login input[type=text], div#login input[type=password]{
+    width: 95%;
+    text-align: center;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 1.5% 2.5%;
+}
+div#login button{
+    display: block;
+    height: 30px;
+    width: 50%;
+    float: left;
+    margin: 10px 2.5%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #F2F3F3;
+    background: #0CA781;
+    text-space: 2px;
+}
+div#login a{
+    display: block;
+    margin: 10px;
+    color: #0CA781;
+    text-decoration: none;
+}
+
+/*********signup********/
+div#signup{
+    display: none;
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    background: #172774;
+    transform: translate(-50%,-50%);
+
+}
+div#signup label{
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    color: #F2F3F3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+div#signup input[type=text], div#signup input[type=password]{
+    width: 95%;
+    text-align: center;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 1.5% 2.5%;
+}
+div#signup a:first-child{
+    display: block;
+    height: 30px;
+    width: 50%;
+    float: left;
+    margin: 10px 2.5%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #F2F3F3;
+    background: #0CA781;
+    text-space: 2px;
+}
+div#signup a:nth-child(2){
+    display: block;
+    margin: 10px;
+    color: #0CA781;
+    text-decoration: none;
 }
