@@ -10,12 +10,12 @@ if (isset($_POST['word1']) && isset($_POST['word2'])) {
         'lang2' => $word2,
         'user' => $userId
     ];
-        if (wordAdd($wordData)) {
-            $host  = $_SERVER['HTTP_HOST'];
-            $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-            $extra = '';
-            header("Location: http://$host$uri/$extra");
-        } else {
-            echo "addword error!";
-        }
-} else require_once("views/login.php");
+    if (wordAdd($wordData)) {
+        $host  = $_SERVER['HTTP_HOST'];
+        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+        $extra = '';
+        header("Location: http://$host$uri/$extra");
+    } else {
+        echo "addword error!";
+    }
+} else require_once("views/addword.php");

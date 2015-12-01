@@ -7,4 +7,5 @@
 	else if($_POST['page']=='signup')require_once("control/signup.php");
 	else if($_POST['page']=='logout')require_once("control/logout.php");
 	else if($_POST['page']=='addword')require_once("control/addword.php");
+	else if($_POST['page']=='newSession')require_once("control/newSession.php");
 ?>
