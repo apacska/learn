@@ -31,6 +31,20 @@ function wordGet($user,$n=30){
     while($row=mysqli_fetch_assoc($result)) $words[]=$row['id'];
     return $words;
 }
+function wordLang1($id){
+    $query="SELECT `lang1` FROM `word` WHERE `id`=$id";
+    $result=wordQuery($query);
+    if(mysqli_num_rows($result)==0)return "";
+    $row=mysqli_fetch_assoc($result);
+    return $row['lang1'];
+}
+function wordLang2($id){
+    $query="SELECT `lang2` FROM `word` WHERE `id`=$id";
+    $result=wordQuery($query);
+    if(mysqli_num_rows($result)==0)return "";
+    $row=mysqli_fetch_assoc($result);
+    return $row['lang2'];
+}
 function wordCheck($lang1,$lang2){
     $query="SELECT * FROM `word` WHERE `lang1`='$lang1' AND lang2='$lang2'";
     $result=wordQuery($query);
