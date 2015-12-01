@@ -13,11 +13,9 @@ if (isset($_POST['numberOfWords'])) {
     {
         $wordId = $_SESSION['words'][$i];
         $lang1[$i] = wordLang1($wordId);
-        $lang2[$i] = wordLang2($wordId);
         ++$i;
     }
     $_SESSION['lang1']=$lang1;
-    $_SESSION['lang2']=$lang2;
-    //var_dump($_SESSION);
+    $_SESSION['wordId']=0;
     require_once('views/session.php');
 } else require_once("views/newSession.php");

@@ -1,5 +1,6 @@
 <?php
 require_once("model/word.php");
+require_once("model/other.php");
 
 if (isset($_POST['word1']) && isset($_POST['word2'])) {
     $word1 = $_POST['word1'];
@@ -11,10 +12,7 @@ if (isset($_POST['word1']) && isset($_POST['word2'])) {
         'user' => $userId
     ];
     if (wordAdd($wordData)) {
-        $host  = $_SERVER['HTTP_HOST'];
-        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        $extra = '';
-        header("Location: http://$host$uri/$extra");
+        redirect();
     } else {
         echo "addword error!";
     }
