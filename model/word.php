@@ -45,11 +45,12 @@ function wordLang2($id){
     $row=mysqli_fetch_assoc($result);
     return $row['lang2'];
 }
-function wordCheck($lang1,$lang2){
-    $query="SELECT * FROM `word` WHERE `lang1`='$lang1' AND lang2='$lang2'";
-    $result=wordQuery($query);
-    if(!$result)return false;
-    $rows=mysqli_num_rows($result);
-    return $rows>0; 
+function wordFail($id){
+    $query="UPDATE `word` SET `priority`=`priority`/2-1 WHERE `id`=$id";
+    wordQuery($query);
+}
+function wordSuccess($id){
+    $query="UPDATE `word` SET `priority`=`priority`/2+1 WHERE `id`=$id";
+    wordQuery($query);
 }
 ?>
