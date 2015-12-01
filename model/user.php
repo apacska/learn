@@ -33,3 +33,10 @@ function userCheck($user,$password){
     $rows=mysqli_num_rows($result);
     return $rows!=0;
 }
+function userId($user){
+    $query="SELECT `id` FROM `user` WHERE `user`='$user'";
+    $result=userQuery($query);
+    if(mysqli_num_rows($result)==0)return 0;
+    $row=mysqli_fetch_assoc($result);
+    return $row['id'];
+}

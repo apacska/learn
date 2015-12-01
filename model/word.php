@@ -16,9 +16,11 @@ function wordExists($lang1,$lang2){
     $rows=mysqli_num_rows($result);
     return $rows>0;
 }
-function wordAdd($lang1,$lang2){
-    if(wordExists($lang1,$lang2))return;
-    $query="INSERT INTO `word` (lang1,lang2) VALUES ('$lang1','$lang2')";
+function wordAdd($wordData){
+    $lang1=$wordData['lang1'];
+    $lang2=$wordData['lang2'];
+    $user=$wordData['user'];
+    $query="INSERT INTO `word` (user,lang1,lang2) VALUES ($user,'$lang1','$lang2')";
     return wordQuery($query)!=false;
 }
 function wordCheck($lang1,$lang2){
