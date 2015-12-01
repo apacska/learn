@@ -5,10 +5,8 @@
  * Date: 2015-11-25
  * Time: 9:19 PM
  */
-unset($_SESSION);
-unset($_POST);
-if(!isset($_SESSION["username"]))
-{
-    require_once("views/login.php");
-    require_once("views/signup.php");
-}
+session_destroy();
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+$extra = '';
+header("Location: http://$host$uri/$extra");
