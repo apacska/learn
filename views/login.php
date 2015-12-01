@@ -8,8 +8,3 @@
         <a href="#">Don't have an account? Make your own!</a>
     </form>
 </div>
-<?php
-/*$_GET["page"]="login";
-var_dump($_SESSION);
-var_dump($_GET);*/
-?>
