@@ -2,7 +2,7 @@
 require_once "config.php";
 if(!isset($db)){
     $config=$_CONFIG['db'];
-    $db=mysqli($config['host'],$config['user'],$config['password'],$config['db']);
+    $db=mysqli_connect($config['host'],$config['user'],$config['password'],$config['db']);
     mysqli_set_charset($db,$config['charset']);
 }
 function wordQuery($query){
