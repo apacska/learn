@@ -25,10 +25,10 @@ function wordAdd($wordData){
 }
 function wordGet($user,$n=30){
     $words=[];
-    $query="SELECT `id` FROM `word` WHERE `user`=$user LIMIT $n ORDER BY `priority` DESC";
+    $query="SELECT `id` FROM `word` WHERE `user`=$user ORDER BY `priority` DESC LIMIT $n";
     $result=wordQuery($query);
     if(!$result)return $words;
-    while($row=mysql_fetch_assoc($result)) $words[]=$row['id'];
+    while($row=mysqli_fetch_assoc($result)) $words[]=$row['id'];
     return $words;
 }
 function wordCheck($lang1,$lang2){
