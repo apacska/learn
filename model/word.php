@@ -25,7 +25,7 @@ function wordAdd($wordData){
 }
 function wordGet($user,$n=30){
     $words=[];
-    $query="SELECT `id` FROM `word` WHERE `user`=$user ORDER BY `priority` DESC LIMIT $n";
+    $query="SELECT `id` FROM `word` WHERE `user`=$user ORDER BY `priority` ASC LIMIT $n";
     $result=wordQuery($query);
     if(!$result)return $words;
     while($row=mysqli_fetch_assoc($result)) $words[]=$row['id'];

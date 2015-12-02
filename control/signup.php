@@ -1,6 +1,7 @@
 <?php
 
 require_once("/model/user.php");
+require_once("model/other.php");
 
 if (isset($_POST['user']) && isset($_POST['password'])) {
     $user = $_POST['user'];
@@ -11,10 +12,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
     ];
     if (userAdd($userData)) {
         $_SESSION["username"] = $user;
-        $host  = $_SERVER['HTTP_HOST'];
-        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        $extra = '';
-        header("Location: http://$host$uri/$extra");
+        redirect();
     } else {
         echo "userAdd error!";
     }
