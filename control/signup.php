@@ -1,8 +1,6 @@
 <?php
-
-require_once("/model/user.php");
+require_once("model/user.php");
 require_once("model/other.php");
-
 if (isset($_POST['user']) && isset($_POST['password'])) {
     $user = $_POST['user'];
     $password = $_POST['password'];

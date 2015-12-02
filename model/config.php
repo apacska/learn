@@ -1,9 +1,9 @@
 <?php
 if(!isset($CONFIG))$_CONFIG=[];
 $_CONFIG['db']=[
-        'host'=>'localhost',
-        'user'=>'root',
-    'password'=>'',
+        'host'=>'nagyzcom.ipagemysql.com',
+        'user'=>'learn',
+    'password'=>'malaguti94',
           'db'=>'learn',
      'charset'=>'utf8'
     ];
