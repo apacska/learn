@@ -1,10 +1,17 @@
 <?php
 if(!isset($CONFIG))$_CONFIG=[];
-$_CONFIG['db']=[
+/*$_CONFIG['db']=[
         'host'=>'nagyzcom.ipagemysql.com',
         'user'=>'learn',
     'password'=>'malaguti94',
           'db'=>'learn',
      'charset'=>'utf8'
-    ];
+    ];*/
+$_CONFIG['db']=[
+    'host'=>'localhost',
+    'user'=>'root',
+    'password'=>'',
+    'db'=>'learn',
+    'charset'=>'utf8'
+];
 ?>
