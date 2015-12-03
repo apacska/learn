@@ -50,7 +50,8 @@ div#login{
     width: 35%;
     top: 50%;
     left: 50%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
+    border-radius: 2px;
     transform: translate(-50%,-50%);
 
 }
@@ -113,7 +114,7 @@ div#login input[type=submit]:hover{
 }
 div#login a{
     display: block;
-    margin: 5px;
+    margin: 5px 40px;
     color: rgba(255,255,255,0.5);
     text-decoration: none;
     transition: 500ms ease all;
@@ -194,7 +195,7 @@ div#signup input[type=submit]:hover{
 }
 div#signup a{
     display: block;
-    margin: 5px;
+    margin: 5px 40px;
     color: rgba(255,255,255,0.5);
     text-decoration: none;
     transition: 500ms ease all;
@@ -205,7 +206,7 @@ div#signup a:hover{
     transition: 500ms ease all;
 }
 ::-webkit-input-placeholder {
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,0.5);
     letter-spacing: 3px;
     font-family: 'Abel', sans-serif;
     font-size: 24px;
@@ -235,13 +236,16 @@ div#signup a:hover{
 .landing{
     width: 100vw;
     height: 50vh;
-    background-image: url("../img/1.jpg");
+    background-image: url("../img/3.jpg");
     background-color: #1e2b33;
+    -webkit-background-repeat: no-repeat;
     background-repeat: no-repeat;
+    -webkit-background-attachment: fixed;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
     background-size: cover;
+    background-position: center;
 }
