@@ -1,6 +1,6 @@
 <div class="landing">
 <div id="signup">
-    <label>Register</label>
+    <label>Sign up</label>
     <form action="" method="post">
         <input type="text" name="user" placeholder="username" />
         <input type="password" name="password" placeholder="password" />

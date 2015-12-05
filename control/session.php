@@ -18,6 +18,7 @@ if (isset($_POST['word1']) && isset($_POST['word2']))
     else
     {
         wordFail($wordId);
+        --$_SESSION['wordId'];
         if($i<count($_SESSION['words'])-1) require_once "views/session.php";
         else require_once "control/learn.php";
     }

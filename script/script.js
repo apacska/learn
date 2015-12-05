@@ -2,7 +2,7 @@ $(document).ready(function(){
     var res=false, regval;
     function bordercolor(element,res){
         if(res) element.css("border","1px solid #44C414");
-        else element.css("border", "1px solid #C42928");
+        else element.css("border", "1px solid #C42224");
     }
     function validate(val,regex,min,max){
         regval=regex.test(val);
@@ -11,7 +11,7 @@ $(document).ready(function(){
     function validator(element,type,min,max){
         var val=element.val();
         var usernameReg = /^[a-zA-Z0-9]*[a-zA-Z]+[a-zA-Z0-9]*$/;
-        var passwordReg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#.?!@$%^&*-]).{8,}$/;
+        var passwordReg = /^(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
         if(type=="username"){
             res=validate(val,usernameReg,min,max);
             if(res) {
@@ -52,11 +52,7 @@ $(document).ready(function(){
     password.keyup(function(){
         validator(password,"password",8,15);
     });
-    button.click(function(){
-        validator(user,"username",3,15);
-        validator(password,"password",8,15);
-    });
-    $("form").submit(function(e){
+    $("div#signup form").submit(function(e){
         if(!validator(user,"username",3,15)) e.preventDefault();
         if(!validator(password,"password",8,15)) e.preventDefault();
     });
