@@ -130,6 +130,7 @@ div#signup{
     display: none;
     position: absolute;
     width: 35%;
+    border-radius: 2px;
     top: 50%;
     left: 50%;
     background: rgba(0,0,0,0.6);
