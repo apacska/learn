@@ -1,25 +1,22 @@
 <?php
 require_once("model/word.php");
 require_once("model/other.php");
-if (isset($_POST['word1']) && isset($_POST['word2']))
-{
+if (isset($_POST['word1']) && isset($_POST['word2'])) {
     $word1 = $_POST['word1'];
     $word2 = $_POST['word2'];
     $i=$_SESSION['wordId'];
     $wordId=$_SESSION['words'][$i];
     ++$_SESSION['wordId'];
     $dbWord2=wordLang2($wordId);
-    if($word2==$dbWord2)
-    {
+    if($word2==$dbWord2) {
         wordSuccess($wordId);
         if($i<count($_SESSION['words'])-1) require_once "views/session.php";
         else require_once "control/learn.php";
     }
-    else
-    {
+    else {
         wordFail($wordId);
         --$_SESSION['wordId'];
-        if($i<count($_SESSION['words'])-1) require_once "views/session.php";
+        if($i<count($_SESSION['words'])) require_once "views/session.php";
         else require_once "control/learn.php";
     }
 }

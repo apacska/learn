@@ -249,3 +249,177 @@ div#signup a:hover{
     background-size: cover;
     background-position: center;
 }
+div#header{
+    width: 100vw;
+    height: 50px;
+    background: #0CA781;
+}
+div.user{
+    float: right;
+    width: 250px;
+    height: 50px;
+}
+p#user{
+    line-height: 50px;
+    font-size: 18px;
+}
+#header > div > form > input[type="submit"]:nth-child(2){
+    position: absolute;
+    padding: 0 50px;
+    background: transparent;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 50px;
+    right: 0px;
+    top: 0;
+    cursor: pointer;
+}
+#header > div > form > input[type="submit"]:nth-child(2):active{
+    outline: 0
+}
+div#addword{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0CA781;
+}
+div#addword label:first-child{
+    display: block;
+    color: #F2F3F3;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+div#addword input[type="text"]{
+    width: 40%;
+    height: 30px;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #1e2b33;
+}
+div#addword input[type="submit"]{
+    display: block;
+    height: 30px;
+    width: 200px;
+    background: #12478A;
+    color: #F2F3F3;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 auto 10px auto;
+    cursor: pointer;
+    transition: 700ms ease all;
+}
+
+div#addword input[type="submit"]:hover{
+    background: #F2F3F3;
+    color: #12478A;
+    transition: 700ms ease all;
+}
+div#addword input[type="text"]:focus{
+    outline: 0;
+}
+
+div#addword input[type="text"]::-webkit-input-placeholder{
+    color: rgba(0,0,0,0.5);
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 700;
+
+}
+.center{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+#newsession input[type="submit"]{
+    width: 150px;
+    height: 50px;
+    background: #12478A;
+    color: #F2F3F3;
+    font-size: 20px;
+    cursor: pointer;
+}
+div#session{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0CA781;
+}
+div#session label:first-child{
+    display: block;
+    color: #F2F3F3;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+div#session input[type="text"]{
+    width: 40%;
+    height: 30px;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #1e2b33;
+}
+div#session input[type="submit"]{
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    background: #12478A;
+    color: #F2F3F3;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 auto 10px auto;
+    cursor: pointer;
+    transition: 700ms ease all;
+}
+
+div#session input[type="submit"]:hover{
+    background: #F2F3F3;
+    color: #12478A;
+    transition: 700ms ease all;
+}
+div#session input[type="text"]:focus{
+    outline: 0;
+}
+
+div#session input[type="text"]::-webkit-input-placeholder{
+    color: rgba(0,0,0,0.5);
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 700;
+}
+button#finish_session{
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    background: #D62629;
+    color: #F2F3F3;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 auto 10px auto;
+    cursor: pointer;
+    transition: 700ms ease all;
+}
+button#finish_session:hover{
+    background: #F2F3F3;
+    color: #D62629;
+    transition: 700ms ease all;
+}

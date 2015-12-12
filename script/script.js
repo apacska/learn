@@ -56,5 +56,8 @@ $(document).ready(function(){
         if(!validator(user,"username",3,15)) e.preventDefault();
         if(!validator(password,"password",8,15)) e.preventDefault();
     });
+    $("button#finish_session").click(function(){
+        window.location.href = "http://nzoltan.eu/learn/";
+    });
 
 });
