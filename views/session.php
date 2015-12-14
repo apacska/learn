@@ -3,7 +3,7 @@
     <form action="" method="post">
         <div class="center">
             <input type='text' name='word1' value='<?php echo $_SESSION['lang1'][$_SESSION['wordId']];?>' readonly/>
-            <input type="text" name="word2" placeholder="magyar" />
+            <input type="text" name="word2" placeholder="magyar" autofocus/>
         </div>
         <input type="hidden" name="page" value="session" />
         <div class="center">

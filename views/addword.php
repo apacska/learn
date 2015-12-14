@@ -2,7 +2,7 @@
     <label>Add word</label>
     <form action="" method="post">
         <div class="center">
-            <input type="text" name="word1" placeholder="angol" />
+            <input type="text" name="word1" placeholder="angol" autofocus/>
             <input type="text" name="word2" placeholder="magyar" />
         </div>
         <input type="hidden" name="page" value="addword" />
