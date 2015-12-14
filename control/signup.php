@@ -10,6 +10,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
     ];
     if (userAdd($userData)) {
         $_SESSION["username"] = $user;
+        $_SESSION["userId"] = userId($user);
         redirect();
     } else {
         echo "userAdd error!";

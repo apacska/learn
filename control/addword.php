@@ -14,6 +14,6 @@ if (isset($_POST['word1']) && isset($_POST['word2'])) {
     if (wordAdd($wordData)) {
         redirect();
     } else {
-        echo "addword error!";
+        echo "addword error!".mysqli_error();
     }
 } else require_once("views/addword.php");

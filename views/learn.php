@@ -18,6 +18,11 @@
             require_once("newSession.php");
             ?>
         </p>
+        <p id="startsession">
+            <?php
+            require_once("stats.php");
+            ?>
+        </p>
     </div>
 </div>
 <?php
