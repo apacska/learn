@@ -53,12 +53,10 @@ function wordSuccess($id){
     $query="UPDATE `word` SET `priority`=`priority`/2+1 WHERE `id`=$id";
     wordQuery($query);
 }
-function getWords($id,$limit){
-    $query="SELECT `lang1`,`priority` FROM `word` WHERE `id`=$id ORDER BY `priority` ASC LIMIT $limit";
+function getWords($id){
+    $query="SELECT `lang1`,`priority` FROM `word` WHERE `user`=$id ORDER BY `priority` ASC";
     $result=wordQuery($query);
     if(mysqli_num_rows($result)==0)return "";
     return mysqli_fetch_all($result);
-    //$row=mysqli_fetch_assoc($result);
-    //return $row['lang1'];
 }
 ?>

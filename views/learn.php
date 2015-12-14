@@ -18,7 +18,7 @@
             require_once("newSession.php");
             ?>
         </p>
-        <p id="startsession">
+        <p id="stats">
             <?php
             require_once("stats.php");
             ?>
