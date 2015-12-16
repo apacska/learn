@@ -3,7 +3,8 @@
 <div class="user">
     <p id="user">
         <?php
-            echo $_SESSION["username"];
+            //echo $_SESSION["username"];
+        require_once("stats.php");
         ?>
     </p>
     <p id="logout">
@@ -18,11 +19,11 @@
             require_once("newSession.php");
             ?>
         </p>
-        <p id="stats">
-            <?php
+        <!p id="stats">
+            <!?php
             require_once("stats.php");
             ?>
-        </p>
+        <!/p>
     </div>
 </div>
 <?php
