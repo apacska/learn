@@ -1,0 +1,120 @@
+Model word
+----------
+Description:
+
+Word model has functions that grant access to manipulating word data in database.
+
+File:
+
+/model/word.php
+
+Usage:
+
+Each function can be called right after including this file.
+
+Functions:
+-------------------------
+wordExists($lang1,$lang2)
+-------------------------
+Description:
+	Checks if a $lang1/$lang2 word exists in database.
+	
+Return value:
+	true  - if word exists in database
+	false - if word does not exist in database
+------------------
+wordAdd($wordData)
+------------------
+Description:
+	Adds a new word to the database.
+	
+Parameters:
+	$wordData - array, it must have the following values:
+		- 'user'  - id of the user adding the word
+		- 'lang1' - word in first language
+		- 'lang2' - corresponding word in second language
+		
+Return value:
+	true  - if the new word was successfully added to database
+	false - if the word could not been added for one of the following reasons:
+				- a database error happened
+-----------------
+wordGet($user,$n)
+-----------------
+Description:
+	Get a list of word ids belonging to a user.
+	
+Parameters:
+	$user - number, identifier of a user
+	$n    - number, length of the list
+	
+Return value:
+	array of integers, each one is an id of a word
+	empty array - if user was not found in database
+			    - or they don't have any words in database
+
+Important:
+	less known words are always before more known words in the list
+
+--------------
+wordLang1($id)
+--------------
+
+Description:
+	Get a word's lang1 version by word id
+	
+Parameters:
+	$id - identifier of a word
+	
+Return value:
+	string       - lang1 version of word
+	empty string - if word was not found in database
+	
+--------------
+wordLang2($id)
+---------------
+
+Description:
+	Get a word's lang2 version by word id
+	
+Parameters:
+	$id - identifier of a word
+	
+Return value:
+	string       - lang2 version of word
+	empty string - if word was not found in database
+	
+-------------
+wordFail($id)
+-------------
+
+Description:
+	Called when a user tries to guess a word and the guess is wrong.
+
+Parameters:
+	$id - identifier of a word
+	
+----------------
+wordSuccess($id)
+----------------
+
+Description:
+	Called when a user tries to guess a word and the guess is right.
+	
+Parameters:
+	$id - identifier of a word
+	
+-------------
+getWords($id)
+-------------
+
+Description:
+	Get a list of word/priority pairs of a given user.
+
+Parameters:
+	$id - identifier of a user
+	
+Return value:
+	list       - list all of words/priorities belonging to the user
+	empty list - if the user was not found in the database	
+               - or they do not have any words

@@ -1,0 +1,79 @@
+Model user
+----------
+Description:
+
+User model has functions that grant access to manipulating user data in database.
+
+File:
+
+/model/user.php
+
+Usage:
+
+Each function can be called right after including this file.
+
+Functions:
+
+-----------------
+userExists($user)
+-----------------
+
+Description:
+	Checks if a username is already taken.
+
+Parameters:
+	$user - string
+	
+Return value:
+	true  - if username is taken, or a database error happens
+	false - if username is not taken
+
+------------------
+userAdd($userData)
+------------------
+
+Description:
+	Adds a new user to the database.
+	
+Parameters:
+	$userData - array, it must have the following values:
+		'user'     - string, name of the new user
+		'password' - string, password of the new user
+		
+Return value:
+	true  - if the new user has been added successfully
+	false - if the new user could not been added for one of the following reasons:
+				- username already exists in database
+				- a database error happens
+				
+Important:
+	userExists function should be called before userAdd to make sure the username is not yet taken!
+	
+--------------------------
+userCheck($user,$password)
+--------------------------
+
+Description:
+	Checks if a user/password combination is present in the database.
+
+Parameters:
+	$user     - string, name of the user
+	$password - string
+	
+Return value:
+	true  - if the user/password combination is correct
+	false - if the user/password combination is not correct or a database error happened.
+	
+-------------
+userId($user)
+-------------
+
+Description:
+	Returns the id of a user from their username
+	
+Parameters:
+	$user - string, name of the user
+	
+Return value:
+	$id - integer, the id of the user having the name $user
+	0   - if the user is not present in the database or a database error happens

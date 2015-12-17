@@ -1,0 +1,33 @@
+Model
+-----
+Model files contains functions that create the connection between the web page and the data in the database.
+
+Each file works with a given table of the database.
+
+The files are as follows:
+
+model/config.php
+----------------
+This file contains configuration data for database connection:
+
+	- 'host'     - MySQL host to connect
+	- 'user'     - MySQL user for connection
+	- 'password' - MySQL password for user
+	- 'db'       - MySQL db which will be selected after connection
+	- 'charset'  - Character set. Value of 'utf8' is recommended
+	
+Each other model file includes config.php, so there is no reason to include it elsewhere.
+
+model/user.php
+--------------
+This file contains functions for manipulating user data. 
+The functions can be called right after including this file.
+
+See model_user.txt for further documentation.
+
+mode/word.php
+-------------
+This file contains functions for manipulating words and word data. 
+The functions can be called right after including this file.
+
+See model_word.txt for further documentation.
